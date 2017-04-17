@@ -3,5 +3,5 @@ This script takes as arguments a text file as input and the file name of an exce
  
 # Example Command to run from the terminal 
 
-python excelsrcipt.py -I data.txt -O balances.xls
+python excelscript.py -I data.txt -O balances.xls
 
