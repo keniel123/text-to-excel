@@ -7,11 +7,9 @@ python excelscript.py -I data.txt -O balances.xls
 
 # Libraries needed to run script
 
-xlwt
-optparse
+xlwt, optparse
 
-# You can download these libraries by using the pip package manager
+You can download these libraries by using the pip package manager
 
-pip install xlwt
-pip install optparse
+pip install xlwt optparse
 
