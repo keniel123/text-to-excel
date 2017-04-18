@@ -3,13 +3,13 @@ This script takes as arguments a text file as input and the file name of an exce
  
 # Example Command to run from the terminal 
 
-python excelscript.py -I data.txt -O balances.xls
+python excelscript.py -I data.txt -O balances.xlsx
 
 # Libraries needed to run script
 
-xlwt, optparse
+xlsxwriter, optparse
 
 You can download these libraries by using the pip package manager
 
-pip install xlwt optparse
+pip install xlxlsxwriter , optparse
 
