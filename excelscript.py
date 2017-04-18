@@ -1,5 +1,5 @@
-import xlwt
 import optparse
+import xlsxwriter
 
 def getData(filename):
 	data = []
@@ -10,12 +10,12 @@ def getData(filename):
 
 def exportToExcel(infile,outfile):
 	data = getData(infile)
-	wb = xlwt.Workbook()
-	sheet = wb.add_sheet("New Sheet")
+	wb = xlsxwriter.Workbook(outfile)
+	sheet = wb.add_worksheet("New Sheet")
 	for row_index in range(len(data)):
 		for col_index in range(len(data[row_index])):
 			sheet.write(row_index, col_index, data[row_index][col_index])
-	wb.save(outfile)
+	wb.close()
 
 if __name__ == "__main__":
 	parser = optparse.OptionParser('usage%prog '+ '-I <inputfile>' + ' -O <outputfile>')
@@ -28,4 +28,3 @@ if __name__ == "__main__":
 		print parser.usage
 		exit(0)
 	exportToExcel(filename,output)
-  
