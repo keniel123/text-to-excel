@@ -5,7 +5,7 @@ def getData(filename):
 	data = []
 	with open(filename) as f:
 		for line in f:
-			data.append([word for word in line.split(",") if word])
+			data.append([word for word in line.split(":") if word])
 	return data
 
 def exportToExcel(infile,outfile):
